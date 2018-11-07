@@ -1,0 +1,183 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    color: #787a7f;
+    font-family: "PT Sans",sans-serif ;
+}
+header{
+    width: 800px;
+    background-image: url("../img/header/background.png");
+
+
+}
+.container{
+
+    margin: 0 auto;
+    width:600px;
+    padding: 50px 5px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    color: #ffffff;
+
+
+
+}
+h1{
+    line-height: 0.5;
+    font-size: 52px;
+    font-family: Belinda,sans-serif;
+}
+
+.header_navigation li{
+   display: inline-block;
+    margin:0 15px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.header_text_block{
+    margin: 0 0 30px;
+}
+
+.header_main_text{
+    line-height: 0.5;
+    font-size: 52px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+.header_text{
+
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+button{
+    margin: 30px 0 73px 0;
+    height: 50px;
+    width: 235px;
+    border:none;
+    border-radius: 30px;
+    background-color: #6fc0b0;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+main{
+
+    width: 800px;
+    background-color: #eeeeef;
+
+
+}
+
+.home{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.col_4{
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col_4 h4{
+    font-size: 16px;
+    color: #41474d;
+}
+hr{
+    display:block;
+    border: none;
+    color: #e2e3e4;
+    background-color: #e2e3e4;
+    width: 134px;
+    height: 2px;
+
+}
+
+/*.col_4 h4:after{*/
+    /*content: "";*/
+    /*display:block;*/
+    /*height: 2px;*/
+    /*width: 134px;*/
+    /**/
+    /*background-color: #787a7f;*/
+/*}*/
+
+.col_4 p{
+
+    color: #787a7f;
+}
+
+
+
+
+@media screen and (min-width:800px){
+
+    header , main {
+    width: 100vw;
+    background-size: cover;
+    }
+
+    .container{
+    width: 75vw;
+    }
+    .header{
+        font-size: 3em;
+    }
+
+    .col_4{
+        margin:3vw;
+        font-size: 2vw;
+    }
+}
+
+
+
+@media screen and (max-width:584px){
+  .container{
+      padding: 10px;
+  }
+    .header_main_text{
+    font-size:10vw;
+    }
+
+
+.home{
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+
+}
+    .col_4{
+        width:65vw;
+        padding:10px;
+    }
+
+
+}
+
+
+
