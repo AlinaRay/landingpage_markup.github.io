@@ -9,9 +9,9 @@ body {
     color: #787a7f;
     font-family: "PT Sans", sans-serif;
 }
-img{
-    display: block;
-}
+/*img{*/
+    /*display: block;*/
+/*}*/
 
 p {
     line-height: 1.8;
@@ -19,17 +19,17 @@ p {
 
 h1 {
     line-height: 0.5;
-    font-size: 3.85rem;
+    font-size: 3.85em;
     font-family: "Dancing Script", cursive;
 }
 
 h3{
-    font-size: 1.2rem;
+    font-size: 1.2em;
     color: #42474c;
 }
 
 h4{
-    font-size: 1.14rem;
+    font-size: 1.14em;
     color: #42474c;
 }
 
@@ -38,17 +38,26 @@ a{
     color: inherit;
 }
 
+.element_on_hover{
+    transition: transform .5s;
+    outline:none;
+}
+
+.element_on_hover:hover{
+    transform: scale(1.2);
+}
+
 i{
     color: #d3d5d9;
-    font-size: 1.4rem;
-    padding: 0 1.07rem 0 0;
+    font-size: 1.4em;
+    padding: 0 15px 0 0;
 }
 
 .container {
-    max-width: 42.84em;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    padding: 3.57rem 0.357rem;
+    padding: 50px 5px;
 }
 
 /* -------------------HEADER---------------------- */
@@ -60,7 +69,7 @@ header {
 }
 
 .header {
-    padding: 0 0 3.57rem 0;
+    padding: 0 0 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,27 +82,27 @@ header {
     flex-direction: row;
     list-style: none;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
 .header_navigation li{
-    padding: 0 1.428rem;
+    padding: 0 20px;
 }
 
 .header_text_block {
-    margin: 0 0 2.14rem;
+    margin: 0 0 30px;
 }
 
 .header_main_text {
-    font-size: 3.7rem;
+    font-size: 3.7em;
     font-weight: 700;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .header_text {
     font-weight: bold;
-    font-size: 1.07rem;
+    font-size: 1.07em;
     position: relative;
 }
                 /* line made with the pseudo-element ::before */
@@ -101,9 +110,10 @@ header {
     content: " ";
     position: absolute;
     display: block;
-    top: 0.714rem;
-    width: 5rem;
-    height: 0.14rem;
+    top: 40%;
+    left:0;
+    width: 22%;
+    height: 2px;
     background-color: #667877;
 }
                 /* line made with the pseudo-element ::after */
@@ -111,24 +121,25 @@ header {
     content: " ";
     position: absolute;
     display: block;
-    top: 0.714rem;
+    top: 40%;
     right: 0;
-    width: 5rem;
-    height: 0.14rem;
+    width: 22%;
+    height: 2px;
     background-color: #667877;
 }
                                 /*----button header---*/
 .header_button {
-    padding: 0.714rem;
-    margin: 2.14rem 0 1.428rem 0;
-    height: 3.57rem;
-    width: 16.78rem;
+    padding: 10px;
+    margin: 30px 0 20px 0;
+    height: 55px;
+    width: 235px;
     border: none;
-    border-radius: 2.14rem;
+    border-radius: 50px;
     background-color: #6fc0b0;
     font-size: 1.07em;
     font-weight: bold;
 }
+
 /* -------------------MAIN own styles---------------------- */
 
 
@@ -143,6 +154,7 @@ header {
 .section_6{
     background-color: #f5f5f5;
 }
+
 .section_1_content,
 .section_2_content,
 .section_4_content,
@@ -155,82 +167,88 @@ header {
 }
 
 .section_2_column h3 ,
-.section_3_content h3 ,
 .section_4_column h4{
-    padding: 0.714rem 0;
+    padding: 10px 0;
 }
         /* line made with the pseudo-element ::before */
-.section_3_content::before ,
-.section_5_column::before ,
-.section_6_column::before {
+.section_3_content h3::after ,
+.section_5_column h3::after ,
+.section_6_column h3::after {
     content: " ";
     display: block;
     position: absolute;
-    top:27%;
+    top:130%;
     background-color: #e9e9ea;
-    width: 19.456em;
-    height: 0.14rem;
+    width: 100%;
+    /*max-width:;*/
+    height: 2px;
 }
 
 /* -------------------SECTION 1---------------------- */
 
 
 .section_1_column{
-    padding: 0.714rem;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /*flex: 0 0 170px;*/
+}
+
+.section_1_column h4{
     position: relative;
 }
                                 /* line made with the pseudo-element ::before */
-.section_1_column::before{
+.section_1_column h4::after{
     content: " ";
     display: block;
     position: absolute;
-    top:55%;
+    top:150%;
     background-color: #e9e9ea;
-    width: 10em;
-    height: 0.14rem;
+    width: 100%;
+    height: 0.14em;
 }
 
 /* -------------------SECTION 2---------------------- */
 
 
 .section_2_column {
-    padding: 0.714rem;
+    padding: 10px 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    /*flex: 1 1 264px;*/
-    position: relative;
-}
-.section_2_column >img{
-    width: 264px;
-    max-width: 100%; ;
 }
 
-.section_2_column:before {
+.section_2_column >img{
+    max-width: 400px;
+    width: 100%;
+}
+
+.section_2_column h3{
+    position: relative;
+}
+
+.section_2_column h3::after {
     content: " ";
     position: absolute;
     display: block;
-    height: 0.14rem;
-    width: 19em;
-    top: 60%;
+    height: 2px;
+    max-width:400px;
+    width: 100%;
+    top: 110%;
     background-color: #e2e3e4;
 }
                             /*----button green---*/
 .section_button {
-    padding: 0.57rem;
-    margin: 1.07rem 0;
+    padding:0 8px;
+    margin: 15px 0;
     border: none;
-    border-radius: 2.14rem;
+    border-radius: 50px;
     background-color: #6fc0b0;
-    height: 2.5rem;
-    width: 7.14rem;
+    height: 35px;
+    width: 100px;
     color: #f5f5f5;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -238,24 +256,26 @@ header {
 
 
 .section_3_content{
-    padding: 0.714rem;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     text-align: left;
+}
+
+.section_3_content h3{
     position: relative;
 }
                             /*----button grey---*/
 .section_grey_button {
-    padding: 0.57rem;
-    margin: 1.07rem 0;
+    padding: 0 8px;
+    margin: 15px 0;
     border: none;
-    border-radius: 2.14rem;
+    border-radius: 50px;
     background-color: #d3d5da;
-    height: 2.5rem;
-    width: 7.14rem;
+    height: 35px;
+    width: 100px;
     color: #f5f5f5;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -263,35 +283,37 @@ header {
 
 
 .section_4_column{
-    padding: 0.357rem;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-between;
     text-align: left;
-    position: relative;
 }
 .section_4_column img{
-        max-width: 181px;
+    max-width: 300px;
+    width:100%;
+}
 
-
+.section_4_column h4{
+    position: relative;
 }
                 /* line made with the pseudo-element ::before */
-.section_4_column:before {
+.section_4_column h4::after {
     content: " ";
     display: block;
     position: absolute;
-    top:14rem;
+    top:120%;
     background-color: #ececed;
-    width: 12.971em;
-    height: 0.14rem;
+    width: 100%;
+    height: 2px;
 }
                             /*----button link---*/
 .section_4_button{
     border: none;
     background: none;
     color: #6fc0af;
-    font-size: 1rem;
+    font-size: 1em;
     text-align: left;
     outline: none;
     padding: 0;
@@ -301,13 +323,15 @@ header {
 
 
 .section_5_column{
-    padding: 0.714rem;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: space-between;
-    /*flex: 0 0 250px;*/
     text-align: left;
+}
+
+.section_5_column h3{
     position: relative;
 }
 
@@ -315,19 +339,26 @@ header {
 
 
 .section_6_content .section_6_img{
+    width: 100%;
+    max-width: 400px;
+    padding:25px 10px 0 0;
+}
 
-    padding:1.78rem 0 0.714rem 0;
-
+.section_6_img img{
+    width: 100%;
+    max-width: 400px;
 }
 
 .section_6_column{
-    padding: 0.714rem;
-    position: relative;
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    /*flex: 0 0 290px;*/
+}
+
+.section_6_column h3{
+    position: relative;
 }
 
 /* -------------------FOOTER---------------------- */
@@ -344,14 +375,15 @@ header {
 
 .container_footer{
     margin: 0 auto;
-    width: 600px;
-    padding: 0.714rem 0.357rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 5px;
 }
 
 /* -------------------FOOTER CONTENT---------------------- */
 
 .footer_content{
-    padding: 0.714rem 0 3.57rem 0;
+    padding: 10px 0 50px 0;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
@@ -369,9 +401,8 @@ header {
 
 .footer_title h4{
     color: #f5f5f5;
-    padding: 0.714rem 0;
+    padding: 10px 0;
     position: relative;
-
 }
                 /* line made with the pseudo-element ::after */
 .footer_title h4::after{
@@ -381,7 +412,7 @@ header {
     top: 100%;
     background-color: #7fcabb;
     width: 100%;
-    height: 0.14rem;
+    height: 2px;
 }
 
 .footer_list{
@@ -393,22 +424,22 @@ header {
 }
 
 .footer_list_item_1{
-    font-size: 1.85rem;
+    font-size: 1.85em;
     font-family:"Dancing Script", cursive;
 }
 
 .footer_list_item_2{
-    font-size: 1.85rem;
+    font-size: 1.85em;
     font-family: "Bubbler One", sans-serif;
 }
 
 .footer_list_item_3{
-    font-size: 1.85rem;
+    font-size: 1.85em;
     font-family: "Cabin", sans-serif;
 }
 
 .footer_list_item_4{
-    font-size: 1.85rem;
+    font-size: 1.85em;
     font-family: "Barlow Semi Condensed", sans-serif;
 }
 
@@ -416,7 +447,7 @@ header {
 
 
 .footer_copyright_content{
-    padding: 0.714rem 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -426,9 +457,10 @@ header {
 }
 
 .footer_links i{
+    padding:0 2px;
     text-align: right;
     color: #b4b5b7;
-    font-size: 0.9rem;
+    font-size: 0.8em;
 }
 
 
@@ -438,7 +470,7 @@ header {
         text-align: center;
     }
     .container{
-        padding: 2rem 1rem;
+        padding: 25px 15px;
     }
 
     .header{
@@ -446,18 +478,16 @@ header {
     }
 
     .header_navigation li{
-        padding: 1em;
-
-
+        padding:0 8px;
     }
     .header_main_text{
-        padding: 0 2.8rem ;
-        font-size: 2.8rem ;
+        padding: 0 30px ;
+        font-size: 2.8em ;
     }
 
     .header_text{
-        padding: 0 0.714rem;
-        font-size:1rem;
+        padding: 0 10px;
+        font-size:1em;
     }
 
 
@@ -466,10 +496,10 @@ header {
         content: " ";
         position: absolute;
         display: block;
-        top: 0.714rem;
+        top: 40%;
         left:0;
-        width: 3em;
-        height: 0.14rem;
+        width: 10%;
+        height: 2px;
         background-color: #667877;
     }
 
@@ -478,10 +508,10 @@ header {
         content: " ";
         position: absolute;
         display: block;
-        top: 0.714em;
+        top: 40%;
         right: 0;
-        width: 3rem;
-        height: 0.14rem;
+        width: 10%;
+        height: 2px;
         background-color: #667877;
     }
 
@@ -493,11 +523,13 @@ header {
     .section_6_content{
         display: flex;
         flex-direction: column;
-        padding: 0 0.714rem;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
     }
 
     .section_3_content{
-        padding:0.714rem;
+        padding:10px;
     }
 
     .section_2_column,
@@ -512,11 +544,11 @@ header {
     }
 
     .section_4_column{
-        padding:1rem 0.714rem;
+        padding:15px 10px;
     }
 
     .section_4_button{
-        margin: 0.714rem 0;
+        margin: 10px 0;
     }
 
     .section_6_img{
@@ -541,4 +573,48 @@ header {
         display: flex;
         flex-direction: column;
     }
+}
+
+@media screen and (min-width: 1200px){
+
+    body{
+        font-size:18px;
+    }
+
+    .container{
+        max-width: 1000px;
+        width:100%;
+    }
+
+    .section_1_column,
+    .section_2_column,
+    .section_3_content,
+    .section_4_column,
+    .section_5_column,
+    .section_6_column,
+    .section_6_img{
+        padding:10px 40px;
+    }
+
+    .section_button,
+    .section_grey_button{
+        padding:0 10px;
+        height: 42px;
+        width: 120px;
+
+    }
+
+    .header_button{
+        padding:12px;
+        height: 66px;
+        width: 282px;
+    }
+
+    .container_footer{
+        margin: 0 auto;
+        width: 100%;
+        max-width:1000px;
+        padding: 12px 8px;
+    }
+
 }
